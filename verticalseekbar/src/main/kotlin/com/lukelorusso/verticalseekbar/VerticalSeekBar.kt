@@ -279,6 +279,10 @@ open class VerticalSeekBar constructor(context: Context, attrs: AttributeSet) :
         this.onProgressChangeListener = listener
     }
 
+    fun setOnStateChangeListener (listener: OnStateChangeListener?) {
+        this.onStateChangeListener = listener
+    }
+
     //region PROTECTED METHODS
     protected fun Context.dpToPixel(dp: Float): Float =
         dp * (resources.displayMetrics.densityDpi.toFloat() / DisplayMetrics.DENSITY_DEFAULT)
